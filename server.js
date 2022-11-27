@@ -33,7 +33,7 @@ app.use(express.urlencoded({extended: true}));
 // Endpoint /app/roll/ that returns JSON for a default roll
 app.get('/app/roll/', (req, res, next) => {
 	// Default roll = 6 sides, 2 die, and 1 roll
-	res.status(200).send(JSON.stringify(roll()));
+	res.status(200).send(JSON.stringify(roll(6, 2, 1)));
 });
 
 // Endpoint /app/roll/ that returns JSON for non-default roll
