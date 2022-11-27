@@ -37,7 +37,7 @@ app.get('/app/roll/', (req, res, next) => {
 });
 
 // Endpoint /app/roll/ that returns JSON for non-default roll
-app.get('/app/roll/', (req, res, next) => {
+app.post('/app/roll/', (req, res, next) => {
 	res.status(200).send(JSON.stringify(roll(parseInt(req.body.sides), parseInt(req.body.dice), parseInt(req.body.rolls))));
 });
 
